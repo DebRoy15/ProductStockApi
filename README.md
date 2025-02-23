@@ -14,10 +14,30 @@ This is a .NET Core Web API for managing products with CRUD operations. The API 
 - Unit tests using Moq for service layer validation
 
 
-**Setup and Run Locally**
+### Setup and Run Locally
 
-.Clone the Repository -> 
-.Restore Dependencies -> dotnet restore
+- **Clone the Repository**  
+  ```sh
+  git clone https://github.com/DebRoy15/ProductStockApi.git
+  cd ProductStockApi
+  ```
+- **Restore Dependencies**
+  ```sh
+  dotnet restore
+  ```
+- **Run Database Migrations**
+  ```sh
+  Add-Migration InitialCreate
+  Update-Database
+  ```
+- **Run the API**
+  ```sh
+  dotnet run
+  ```
+- **Running Unit Tests**
+  ```sh
+  dotnet test
+  ```
 
 **Available API Endpoints**
 
@@ -32,7 +52,4 @@ This is a .NET Core Web API for managing products with CRUD operations. The API 
 | PUT    | `/api/products/add-to-quantity/{id}/{quantity}`  | Increase quantity |
 
 
-Run the API -> dotnet run
-
-Running Unit Tests -> dotnet test
 
